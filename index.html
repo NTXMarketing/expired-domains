@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ExpiredAuctions.com — The #1 platform for domain investors. Discover today's top expired domain auctions from GoDaddy, Dynadot, and Namecheap, curated and rated daily.">
+<meta name="robots" content="noindex, nofollow">
+<title>ExpiredAuctions.com — The Smart Way to Find Expired Domain Auctions</title>
+<!-- Bootstrap 5.3 CSS (CDN) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- Bootstrap Icons 1.11 (CDN) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Google Fonts — Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ea-primary:#0d6efd; --ea-cyan:#4facfe; --ea-purple:#b07cff;
+  --ea-pink:#ff6b9d; --ea-gold:#d4a017; --ea-gold-b:#f5c842;
+  --ea-green:#198754; --ea-hbg1:#050816; --ea-hbg2:#0b1228; --ea-hbg3:#131c3d;
+  --ea-t:#f2f5ff; --ea-m:rgba(242,245,255,.72);
+  --ea-cb:rgba(255,255,255,.06); --ea-cbr:rgba(255,255,255,.12);
+  --ea-sd:#0d1117; --ea-sm:#111827; --ea-sl:#161f2e;
+  --ea-cbg:#16213e; --ea-cbo:rgba(255,255,255,.08);
+  --ea-rc:.85rem; --ea-rp:50rem;
+  --ea-f:'Inter',system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--ea-f);background:var(--ea-sd);color:var(--ea-t);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.ea-nav{background:rgba(5,8,22,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--ea-cbr);position:sticky;top:0;z-index:1000;padding:.75rem 0}
+.ea-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.15rem;color:var(--ea-t);letter-spacing:-.02em}
+.ea-brand:hover{color:var(--ea-cyan)}
+.ea-logo{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--ea-cyan),var(--ea-primary));display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;color:#fff;flex-shrink:0}
+.ea-nav-cta{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem 1.1rem;border-radius:var(--ea-rp);background:linear-gradient(135deg,var(--ea-cyan),#7dc1ff);color:#0a0f24;font-weight:700;font-size:.875rem;text-decoration:none;box-shadow:0 6px 18px -6px rgba(79,172,254,.55);transition:box-shadow .2s,transform .15s}
+.ea-nav-cta:hover{color:#0a0f24;box-shadow:0 10px 24px -6px rgba(79,172,254,.75);transform:translateY(-1px)}
+.ea-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at top right,var(--ea-hbg3),var(--ea-hbg2) 35%,var(--ea-hbg1) 80%),var(--ea-hbg1);padding:5rem 0 5.5rem;color:var(--ea-t)}
+.ea-mesh{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.ea-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;will-change:transform}
+.ea-ba{width:600px;height:600px;top:-200px;left:-150px;background:radial-gradient(circle,var(--ea-cyan),transparent 70%);animation:dA 18s ease-in-out infinite alternate}
+.ea-bb{width:520px;height:520px;top:20px;right:-180px;background:radial-gradient(circle,var(--ea-purple),transparent 70%);animation:dB 22s ease-in-out infinite alternate}
+.ea-bc{width:300px;height:300px;bottom:-80px;left:40%;background:radial-gradient(circle,var(--ea-pink),transparent 70%);opacity:.25;animation:dC 26s ease-in-out infinite alternate}
+.ea-grid{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,rgba(0,0,0,.65),rgba(0,0,0,.15));-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.65),rgba(0,0,0,.15))}
+@keyframes dA{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(80px,60px,0) scale(1.1)}}
+@keyframes dB{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(-90px,80px,0) scale(1.05)}}
+@keyframes dC{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(40px,-40px,0) scale(1.08)}}
+@media(prefers-reduced-motion:reduce){.ea-blob,.ea-showcase{animation:none!important}}
+.ea-hi{position:relative;z-index:2}
+.ea-eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border-radius:var(--ea-rp);background:var(--ea-cb);border:1px solid var(--ea-cbr);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ea-t);margin-bottom:1.25rem}
+.ea-dot{width:7px;height:7px;border-radius:50%;background:#2ecc71;animation:pd 2.4s ease-in-out infinite;flex-shrink:0}
+@keyframes pd{0%,100%{box-shadow:0 0 0 0 rgba(46,204,113,.55)}50%{box-shadow:0 0 0 8px rgba(46,204,113,0)}}
+.ea-h1{font-size:clamp(2.1rem,5.5vw,3.8rem);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:var(--ea-t);margin:0 0 1.1rem}
+.ea-grad{display:inline-block;background:linear-gradient(120deg,var(--ea-cyan),var(--ea-purple));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.ea-sub{font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.6;color:var(--ea-m);max-width:38rem;margin:0 0 2rem}
+.ea-sub strong{color:var(--ea-t);font-weight:700}
+.ea-ctas{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:2.5rem}
+.ea-btn-p{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 1.75rem;border-radius:var(--ea-rp);background:linear-gradient(135deg,var(--ea-cyan),#7dc1ff);color:#0a0f24;font-weight:800;font-size:1.05rem;text-decoration:none;box-shadow:0 12px 28px -8px rgba(79,172,254,.65);border:1px solid rgba(255,255,255,.2);transition:box-shadow .2s,transform .15s}
+.ea-btn-p:hover{color:#0a0f24;box-shadow:0 16px 36px -8px rgba(79,172,254,.8);transform:translateY(-2px)}
+.ea-btn-p .arr{transition:transform .18s}
+.ea-btn-p:hover .arr{transform:translateX(4px)}
+.ea-btn-g{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.6rem;border-radius:var(--ea-rp);background:transparent;color:var(--ea-t);border:1px solid var(--ea-cbr);font-weight:600;font-size:1rem;text-decoration:none;transition:background .2s,border-color .2s}
+.ea-btn-g:hover{background:var(--ea-cb);border-color:rgba(255,255,255,.22);color:var(--ea-t)}
+.ea-chips{display:flex;flex-wrap:wrap;gap:.65rem;list-style:none;margin:0;padding:0}
+.ea-chip{display:inline-flex;flex-direction:column;gap:.1rem;padding:.65rem 1rem;background:var(--ea-cb);border:1px solid var(--ea-cbr);border-radius:.6rem;min-width:115px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.ea-cv{font-size:1.1rem;font-weight:800;color:var(--ea-t);letter-spacing:-.01em;display:flex;align-items:center;gap:.35rem}
+.ea-cl{font-size:.7rem;color:var(--ea-m);letter-spacing:.03em;text-transform:uppercase}
+.ea-showcase{position:relative;width:100%;max-width:420px;padding:1.6rem 1.6rem 1.5rem;border-radius:1.1rem;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(46,204,113,.35);box-shadow:0 32px 64px -20px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);animation:fc 6s ease-in-out infinite alternate}
+@keyframes fc{0%{transform:translateY(0)}100%{transform:translateY(-8px)}}
+.ea-sc-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.ea-sc-lbl{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--ea-gold-b)}
+.ea-src{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .65rem;border-radius:var(--ea-rp);font-size:.7rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+.ea-src-gd{background:rgba(0,168,45,.18);color:#4ade80;border:1px solid rgba(0,168,45,.3)}
+.ea-sc-dom{font-size:1.45rem;font-weight:800;color:var(--ea-t);letter-spacing:-.02em;margin:0 0 .3rem;word-break:break-all}
+.ea-sc-tld{color:var(--ea-cyan)}
+.ea-sc-meta{font-size:.78rem;color:var(--ea-m);margin-bottom:1rem}
+.ea-rb-wrap{margin-bottom:1rem}
+.ea-rb-lbl{display:flex;justify-content:space-between;font-size:.72rem;color:var(--ea-m);margin-bottom:.3rem}
+.ea-rb-lbl strong{color:#4ade80;font-weight:700}
+.ea-rb-track{height:5px;border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden}
+.ea-rb-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#198754,#4ade80);width:87%}
+.ea-sc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:1.1rem}
+.ea-sc-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:.5rem;padding:.5rem .6rem;text-align:center}
+.ea-sc-sv{font-size:.9rem;font-weight:700;color:var(--ea-t);display:block}
+.ea-sc-sl{font-size:.65rem;color:var(--ea-m);text-transform:uppercase;letter-spacing:.03em}
+.ea-sc-cta{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.7rem;border-radius:.6rem;background:linear-gradient(135deg,rgba(79,172,254,.15),rgba(79,172,254,.08));border:1px solid rgba(79,172,254,.25);color:var(--ea-cyan);font-weight:700;font-size:.875rem;text-decoration:none;transition:background .2s,border-color .2s}
+.ea-sc-cta:hover{background:linear-gradient(135deg,rgba(79,172,254,.22),rgba(79,172,254,.14));border-color:rgba(79,172,254,.4);color:var(--ea-cyan)}
+.ea-sec{padding:4.5rem 0}
+.ea-sec-alt{background:var(--ea-sm)}
+.ea-sec-dk{background:var(--ea-sd)}
+.ea-sec-lt{background:var(--ea-sl)}
+.ea-sec-hdr{text-align:center;margin-bottom:3rem}
+.ea-sec-ey{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .85rem;border-radius:var(--ea-rp);background:rgba(79,172,254,.1);border:1px solid rgba(79,172,254,.2);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ea-cyan);margin-bottom:1rem}
+.ea-sec-t{font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.025em;color:var(--ea-t);margin:0 0 .75rem;line-height:1.15}
+.ea-sec-s{font-size:1.05rem;color:var(--ea-m);max-width:42rem;margin:0 auto;line-height:1.65}
+.ea-feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.ea-feat{background:var(--ea-cbg);border:1px solid var(--ea-cbo);border-radius:var(--ea-rc);padding:1.75rem 1.6rem;transition:border-color .2s,box-shadow .2s,transform .2s;position:relative;overflow:hidden}
+.ea-feat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--ea-cyan),var(--ea-purple));opacity:0;transition:opacity .2s}
+.ea-feat:hover{border-color:rgba(79,172,254,.3);box-shadow:0 16px 40px -12px rgba(0,0,0,.5);transform:translateY(-3px)}
+.ea-feat:hover::before{opacity:1}
+.ea-fi{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:1.1rem;flex-shrink:0}
+.ic-b{background:rgba(13,110,253,.15);color:#6ea8fe}
+.ic-c{background:rgba(79,172,254,.15);color:var(--ea-cyan)}
+.ic-p{background:rgba(176,124,255,.15);color:var(--ea-purple)}
+.ic-g{background:rgba(25,135,84,.15);color:#4ade80}
+.ic-o{background:rgba(212,160,23,.15);color:var(--ea-gold-b)}
+.ic-k{background:rgba(255,107,157,.15);color:var(--ea-pink)}
+.ea-ft{font-size:1.05rem;font-weight:700;color:var(--ea-t);margin:0 0 .5rem;letter-spacing:-.01em}
+.ea-fd{font-size:.9rem;color:var(--ea-m);line-height:1.65;margin:0}
+.ea-t100{background:radial-gradient(ellipse at 70% 50%,rgba(212,160,23,.08),transparent 60%),var(--ea-sd);border-top:1px solid rgba(212,160,23,.12);border-bottom:1px solid rgba(212,160,23,.12)}
+.ea-gold-ey{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .85rem;border-radius:var(--ea-rp);background:rgba(212,160,23,.12);border:1px solid rgba(212,160,23,.25);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ea-gold-b);margin-bottom:1rem}
+.ea-t100-h{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-.03em;color:var(--ea-t);margin:0 0 1rem;line-height:1.1}
+.ea-gold-g{background:linear-gradient(120deg,var(--ea-gold),var(--ea-gold-b));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.ea-t100-s{font-size:1.05rem;color:var(--ea-m);max-width:36rem;line-height:1.65;margin-bottom:2rem}
+.ea-btn-gold{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 1.75rem;border-radius:var(--ea-rp);background:linear-gradient(135deg,var(--ea-gold),var(--ea-gold-b));color:#0a0f24;font-weight:800;font-size:1.05rem;text-decoration:none;box-shadow:0 12px 28px -8px rgba(212,160,23,.55);border:1px solid rgba(255,255,255,.15);transition:box-shadow .2s,transform .15s}
+.ea-btn-gold:hover{color:#0a0f24;box-shadow:0 16px 36px -8px rgba(212,160,23,.75);transform:translateY(-2px)}
+.ea-btn-gold .arr{transition:transform .18s}
+.ea-btn-gold:hover .arr{transform:translateX(4px)}
+.ea-t100-card{background:var(--ea-cbg);border:1px solid var(--ea-cbo);border-radius:var(--ea-rc);overflow:hidden}
+.ea-t100-ch{padding:.85rem 1.25rem;background:rgba(212,160,23,.08);border-bottom:1px solid rgba(212,160,23,.15);display:flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:700;color:var(--ea-gold-b);letter-spacing:.04em;text-transform:uppercase}
+.ea-t100-row{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.04);transition:background .15s}
+.ea-t100-row:last-child{border-bottom:none}
+.ea-t100-row:hover{background:rgba(255,255,255,.03)}
+.ea-t100-rk{font-size:.75rem;font-weight:700;color:var(--ea-m);width:28px;flex-shrink:0}
+.rk-g{color:var(--ea-gold-b)}
+.rk-s{color:#c0c0c0}
+.rk-b{color:#cd7f32}
+.ea-t100-n{font-size:.9rem;font-weight:600;color:var(--ea-t);flex:1}
+.ea-t100-n .tld{color:var(--ea-cyan)}
+.ea-t100-m{display:flex;align-items:center;gap:.75rem}
+.ea-t100-bid{font-size:.8rem;font-weight:700;color:#4ade80}
+.ea-rtag{display:inline-flex;align-items:center;gap:.25rem;padding:.15rem .5rem;border-radius:var(--ea-rp);font-size:.68rem;font-weight:700}
+.rt-h{background:rgba(25,135,84,.2);color:#4ade80;border:1px solid rgba(25,135,84,.3)}
+.rt-m{background:rgba(255,193,7,.2);color:#ffc107;border:1px solid rgba(255,193,7,.3)}
+.ea-src-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.ea-src-card{background:var(--ea-cbg);border:1px solid var(--ea-cbo);border-radius:var(--ea-rc);padding:2rem 1.75rem;transition:border-color .2s,box-shadow .2s,transform .2s;text-decoration:none;display:block}
+.ea-src-card:hover{transform:translateY(-4px);box-shadow:0 20px 48px -12px rgba(0,0,0,.55)}
+.ea-src-gd-c:hover{border-color:rgba(0,168,45,.4)}
+.ea-src-dy-c:hover{border-color:rgba(79,172,254,.4)}
+.ea-src-nc-c:hover{border-color:rgba(255,107,157,.4)}
+.ea-mono{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;color:#fff;margin-bottom:1.25rem;flex-shrink:0}
+.ea-mono-gd{background:linear-gradient(135deg,#00a82d,#00c93a);box-shadow:0 8px 20px -6px rgba(0,168,45,.5)}
+.ea-mono-dy{background:linear-gradient(135deg,#0d6efd,#4facfe);box-shadow:0 8px 20px -6px rgba(13,110,253,.5)}
+.ea-mono-nc{background:linear-gradient(135deg,#e0522b,#ff7a5c);box-shadow:0 8px 20px -6px rgba(224,82,43,.5)}
+.ea-src-name{font-size:1.2rem;font-weight:800;color:var(--ea-t);margin:0 0 .4rem;letter-spacing:-.01em}
+.ea-src-desc{font-size:.875rem;color:var(--ea-m);line-height:1.6;margin:0 0 1.25rem}
+.ea-src-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:700;text-decoration:none;transition:gap .15s}
+.ea-src-link-gd{color:#4ade80}
+.ea-src-link-dy{color:var(--ea-cyan)}
+.ea-src-link-nc{color:var(--ea-pink)}
+.ea-src-link:hover{gap:.65rem}
+.ea-src-stats{display:flex;gap:1.25rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--ea-cbo)}
+.ea-src-stat-v{font-size:.95rem;font-weight:700;color:var(--ea-t);display:block}
+.ea-src-stat-l{font-size:.68rem;color:var(--ea-m);text-transform:uppercase;letter-spacing:.03em}
+.ea-guide-sec{background:radial-gradient(ellipse at 30% 50%,rgba(176,124,255,.08),transparent 60%),var(--ea-sm)}
+.ea-guide-card{background:linear-gradient(135deg,rgba(176,124,255,.08),rgba(79,172,254,.05));border:1px solid rgba(176,124,255,.2);border-radius:1.25rem;padding:3rem 2.5rem;position:relative;overflow:hidden}
+.ea-guide-card::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(176,124,255,.12),transparent 70%);pointer-events:none}
+.ea-guide-ey{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .85rem;border-radius:var(--ea-rp);background:rgba(176,124,255,.12);border:1px solid rgba(176,124,255,.25);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ea-purple);margin-bottom:1rem}
+.ea-guide-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.025em;color:var(--ea-t);margin:0 0 1rem;line-height:1.15}
+.ea-guide-s{font-size:1rem;color:var(--ea-m);line-height:1.65;margin-bottom:1.75rem;max-width:34rem}
+.ea-btn-purple{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.65rem;border-radius:var(--ea-rp);background:linear-gradient(135deg,var(--ea-purple),#c9a0ff);color:#0a0f24;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 12px 28px -8px rgba(176,124,255,.55);border:1px solid rgba(255,255,255,.15);transition:box-shadow .2s,transform .15s}
+.ea-btn-purple:hover{color:#0a0f24;box-shadow:0 16px 36px -8px rgba(176,124,255,.75);transform:translateY(-2px)}
+.ea-btn-purple .arr{transition:transform .18s}
+.ea-btn-purple:hover .arr{transform:translateX(4px)}
+.ea-guide-topics{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.ea-guide-topic{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .75rem;border-radius:var(--ea-rp);background:rgba(176,124,255,.1);border:1px solid rgba(176,124,255,.18);font-size:.78rem;font-weight:600;color:var(--ea-purple)}
+.ea-nl-sec{background:radial-gradient(ellipse at 60% 40%,rgba(79,172,254,.07),transparent 55%),var(--ea-sl)}
+.ea-nl-card{background:linear-gradient(135deg,rgba(79,172,254,.08),rgba(13,110,253,.04));border:1px solid rgba(79,172,254,.18);border-radius:1.25rem;padding:3rem 2.5rem;position:relative;overflow:hidden}
+.ea-nl-card::before{content:'';position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(79,172,254,.1),transparent 70%);pointer-events:none}
+.ea-nl-ey{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .85rem;border-radius:var(--ea-rp);background:rgba(79,172,254,.1);border:1px solid rgba(79,172,254,.2);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ea-cyan);margin-bottom:1rem}
+.ea-nl-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.025em;color:var(--ea-t);margin:0 0 .75rem;line-height:1.15}
+.ea-nl-s{font-size:1rem;color:var(--ea-m);line-height:1.65;margin-bottom:1.75rem;max-width:34rem}
+.ea-nl-perks{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}
+.ea-nl-perk{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .75rem;border-radius:var(--ea-rp);background:rgba(79,172,254,.08);border:1px solid rgba(79,172,254,.15);font-size:.78rem;font-weight:600;color:var(--ea-cyan)}
+.ea-nl-proof{display:flex;flex-wrap:wrap;gap:1.5rem}
+.ea-nl-proof-item{display:flex;flex-direction:column;gap:.15rem}
+.ea-nl-proof-v{font-size:1.4rem;font-weight:900;color:var(--ea-t);letter-spacing:-.02em}
+.ea-nl-proof-l{font-size:.72rem;color:var(--ea-m);text-transform:uppercase;letter-spacing:.04em}
+.ea-footer{background:#050816;border-top:1px solid var(--ea-cbr);padding:3.5rem 0 2rem}
+.ea-footer-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.1rem;color:var(--ea-t);letter-spacing:-.02em;margin-bottom:.75rem}
+.ea-footer-brand:hover{color:var(--ea-cyan)}
+.ea-footer-desc{font-size:.875rem;color:var(--ea-m);line-height:1.65;margin-bottom:1.25rem}
+.ea-footer-h6{font-size:.8rem;font-weight:700;color:var(--ea-t);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem}
+.ea-footer-link{font-size:.875rem;color:var(--ea-m);text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;transition:color .15s}
+.ea-footer-link:hover{color:var(--ea-cyan)}
+.ea-footer-divider{border-color:var(--ea-cbr);margin:2rem 0 1.5rem}
+.ea-footer-copy{font-size:.8rem;color:rgba(242,245,255,.4)}
+.ea-footer-copy a{color:rgba(242,245,255,.55);text-decoration:none}
+.ea-footer-copy a:hover{color:var(--ea-cyan)}
+@media(max-width:991.98px){
+  .ea-hero{padding:3.5rem 0 4rem}
+  .ea-showcase{max-width:100%;margin-top:2.5rem}
+  .ea-sec{padding:3rem 0}
+  .ea-guide-card,.ea-nl-card{padding:2rem 1.5rem}
+}
+@media(max-width:575.98px){
+  .ea-h1{font-size:2rem}
+  .ea-ctas{flex-direction:column}
+  .ea-btn-p,.ea-btn-g,.ea-btn-gold,.ea-btn-purple{justify-content:center}
+  .ea-chips{gap:.5rem}
+  .ea-chip{min-width:calc(50% - .25rem)}
+}
+
+/* Scroll-triggered fade-in-up */
+.ea-animate {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.ea-animate.ea-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ea-animate { opacity: 1; transform: none; transition: none; }
+}
+
+</style>
+</head>
+<body>
+<!-- ═══ NAVBAR ═══ -->
+<nav class="ea-nav" aria-label="Site navigation">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="https://expiredauctions.com/" class="ea-brand">
+      <div class="ea-logo" aria-hidden="true">E</div>
+      <span>ExpiredAuctions<span style="color:var(--ea-cyan)">.com</span></span>
+    </a>
+    <div class="d-flex align-items-center gap-3">
+      <a href="https://expiredauctions.com/top-100" class="d-none d-md-inline-flex align-items-center gap-1 text-decoration-none" style="font-size:.875rem;font-weight:600;color:var(--ea-gold-b)">
+        <i class="bi bi-trophy-fill" aria-hidden="true"></i> Top 100
+      </a>
+      <a href="https://expiredauctions.com/guide" class="d-none d-md-inline-flex align-items-center gap-1 text-decoration-none" style="font-size:.875rem;font-weight:600;color:var(--ea-m)">
+        <i class="bi bi-book" aria-hidden="true"></i> Guide
+      </a>
+      <a href="https://expiredauctions.com/" class="ea-nav-cta">
+        <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
+        Visit Site
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="ea-hero" aria-labelledby="hero-headline">
+  <div class="ea-mesh" aria-hidden="true">
+    <span class="ea-blob ea-ba"></span>
+    <span class="ea-blob ea-bb"></span>
+    <span class="ea-blob ea-bc"></span>
+    <span class="ea-grid"></span>
+  </div>
+  <div class="container ea-hi">
+    <div class="row align-items-center g-5">
+      <!-- Left: copy -->
+      <div class="col-lg-6">
+        <div class="ea-eyebrow">
+          <span class="ea-dot" aria-hidden="true"></span>
+          Live Auctions Updated Daily
+        </div>
+        <h1 class="ea-h1" id="hero-headline">
+          Find the Best<br>
+          <span class="ea-grad">Expired Domain</span><br>
+          Auctions — Daily.
+        </h1>
+        <p class="ea-sub">
+          <strong>ExpiredAuctions.com</strong> aggregates, rates, and curates the top expired domain auctions from GoDaddy, Dynadot, and Namecheap — so you spend less time searching and more time winning.
+        </p>
+        <div class="ea-ctas">
+          <a href="https://expiredauctions.com/" class="ea-btn-p">
+            <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+            Browse Today's Auctions
+            <i class="bi bi-arrow-right arr" aria-hidden="true"></i>
+          </a>
+          <a href="https://expiredauctions.com/top-100" class="ea-btn-g">
+            <i class="bi bi-trophy" aria-hidden="true"></i>
+            View Top 100
+          </a>
+        </div>
+        <ul class="ea-chips" aria-label="Platform statistics">
+          <li class="ea-chip">
+            <span class="ea-cv"><i class="bi bi-collection-fill" style="color:var(--ea-cyan)" aria-hidden="true"></i> 100+</span>
+            <span class="ea-cl">Domains Daily</span>
+          </li>
+          <li class="ea-chip">
+            <span class="ea-cv"><i class="bi bi-shop" style="color:var(--ea-purple)" aria-hidden="true"></i> 3</span>
+            <span class="ea-cl">Auction Sources</span>
+          </li>
+          <li class="ea-chip">
+            <span class="ea-cv"><i class="bi bi-star-fill" style="color:var(--ea-gold-b)" aria-hidden="true"></i> Rated</span>
+            <span class="ea-cl">Every Domain</span>
+          </li>
+          <li class="ea-chip">
+            <span class="ea-cv"><i class="bi bi-envelope-fill" style="color:var(--ea-pink)" aria-hidden="true"></i> Free</span>
+            <span class="ea-cl">Daily Newsletter</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Right: showcase card -->
+      <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end">
+        <div class="ea-showcase" role="img" aria-label="Sample domain auction card showing premium domain listing">
+          <div class="ea-sc-hdr">
+            <span class="ea-sc-lbl"><i class="bi bi-trophy-fill" aria-hidden="true"></i> Featured Auction</span>
+            <span class="ea-src ea-src-gd"><i class="bi bi-circle-fill" style="font-size:.45rem" aria-hidden="true"></i> GoDaddy</span>
+          </div>
+          <p class="ea-sc-dom">venture<span class="ea-sc-tld">.com</span></p>
+          <p class="ea-sc-meta">Registered 2009 &nbsp;·&nbsp; 8 bids &nbsp;·&nbsp; Ends in 4h 22m</p>
+          <div class="ea-rb-wrap">
+            <div class="ea-rb-lbl"><span>Domain Rating</span><strong>87 / 100</strong></div>
+            <div class="ea-rb-track"><div class="ea-rb-fill"></div></div>
+          </div>
+          <div class="ea-sc-stats">
+            <div class="ea-sc-stat"><span class="ea-sc-sv">$412</span><span class="ea-sc-sl">Current Bid</span></div>
+            <div class="ea-sc-stat"><span class="ea-sc-sv">15yr</span><span class="ea-sc-sl">Domain Age</span></div>
+            <div class="ea-sc-stat"><span class="ea-sc-sv">2,840</span><span class="ea-sc-sl">Backlinks</span></div>
+          </div>
+          <a href="https://expiredauctions.com/" class="ea-sc-cta">
+            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+            View Auction on ExpiredAuctions.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURES ═══ -->
+<section class="ea-sec ea-sec-alt" aria-labelledby="features-title">
+  <div class="container">
+    <div class="ea-sec-hdr">
+      <div class="ea-sec-ey"><i class="bi bi-stars" aria-hidden="true"></i> Why Domain Investors Choose Us</div>
+      <h2 class="ea-sec-t" id="features-title">Everything You Need to Win at Domain Investing</h2>
+      <p class="ea-sec-s">We built ExpiredAuctions.com for serious domain investors who want data-driven insights, curated lists, and time-saving tools — all in one place.</p>
+    </div>
+    <div class="ea-feat-grid">
+      <div class="ea-feat">
+        <div class="ea-fi ic-c"><i class="bi bi-collection-fill" aria-hidden="true"></i></div>
+        <h3 class="ea-ft">Multi-Source Aggregation</h3>
+        <p class="ea-fd">We pull live auction data from GoDaddy, Dynadot, and Namecheap every day — normalized into a single, easy-to-browse interface. No more tab-switching.</p>
+      </div>
+      <div class="ea-feat">
+        <div class="ea-fi ic-o"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i></div>
+        <h3 class="ea-ft">Proprietary Domain Rating</h3>
+        <p class="ea-fd">Every domain is scored 0–100 using our algorithm that weighs age, backlinks, TLD quality, word count, brandability, and auction activity.</p>
+      </div>
+      <div class="ea-feat">
+        <div class="ea-fi ic-g"><i class="bi bi-trophy-fill" aria-hidden="true"></i></div>
+        <h3 class="ea-ft">Daily Top 100 List</h3>
+        <p class="ea-fd">Our curated Top 100 surfaces the highest-rated domains expiring today — saving you hours of manual research across multiple platforms.</p>
+      </div>
+      <div class="ea-feat">
+        <div class="ea-fi ic-p"><i class="bi bi-funnel-fill" aria-hidden="true"></i></div>
+        <h3 class="ea-ft">Powerful Filtering Tools</h3>
+        <p class="ea-fd">Filter by TLD, source, price range, domain age, number of bids, word count, and more. Find exactly the type of domain you're looking for in seconds.</p>
+      </div>
+      <div class="ea-feat">
+        <div class="ea-fi ic-b"><i class="bi bi-book-fill" aria-hidden="true"></i></div>
+        <h3 class="ea-ft">Free Investor Guide</h3>
+        <p class="ea-fd">Our comprehensive Domain Investor Guide covers valuation, bidding strategies, SEO value, portfolio management, and how to use our platform effectively.</p>
+      </div>
+      <div class="ea-feat">
+        <div class="ea-fi ic-k"><i class="bi bi-envelope-paper-fill" aria-hidden="true"></i></div>
+        <h3 class="ea-ft">Free Daily Newsletter</h3>
+        <p class="ea-fd">Get tomorrow's Top 10 expired domains delivered to your inbox every morning. No spam, no upsells — just the domains worth your time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TOP 100 ═══ -->
+<section class="ea-sec ea-t100" aria-labelledby="top100-title">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="ea-gold-ey"><i class="bi bi-trophy-fill" aria-hidden="true"></i> Today's Best Picks</div>
+        <h2 class="ea-t100-h" id="top100-title">
+          The <span class="ea-gold-g">Top 100</span><br>Domains — Every Day
+        </h2>
+        <p class="ea-t100-s">Our algorithm scores every expiring domain and surfaces the 100 best opportunities available today. Updated fresh each morning so you never miss a deal.</p>
+        <a href="https://expiredauctions.com/top-100" class="ea-btn-gold">
+          <i class="bi bi-trophy-fill" aria-hidden="true"></i>
+          See Today's Top 100
+          <i class="bi bi-arrow-right arr" aria-hidden="true"></i>
+        </a>
+        <div class="mt-4 d-flex flex-wrap gap-3">
+          <div>
+            <div style="font-size:1.5rem;font-weight:900;color:var(--ea-gold-b)">100</div>
+            <div style="font-size:.72rem;color:var(--ea-m);text-transform:uppercase;letter-spacing:.04em">Domains Curated</div>
+          </div>
+          <div>
+            <div style="font-size:1.5rem;font-weight:900;color:var(--ea-gold-b)">Daily</div>
+            <div style="font-size:.72rem;color:var(--ea-m);text-transform:uppercase;letter-spacing:.04em">Fresh Updates</div>
+          </div>
+          <div>
+            <div style="font-size:1.5rem;font-weight:900;color:var(--ea-gold-b)">Free</div>
+            <div style="font-size:.72rem;color:var(--ea-m);text-transform:uppercase;letter-spacing:.04em">No Account Needed</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="ea-t100-card" aria-label="Sample Top 100 domain list preview">
+          <div class="ea-t100-ch"><i class="bi bi-trophy-fill" aria-hidden="true"></i> Today's Top Domains — Sample Preview</div>
+          <div class="ea-t100-row">
+            <span class="ea-t100-rk rk-g">#1</span>
+            <span class="ea-t100-n">capital<span class="tld">.com</span></span>
+            <div class="ea-t100-m"><span class="ea-t100-bid">$1,240</span><span class="ea-rtag rt-h">92</span></div>
+          </div>
+          <div class="ea-t100-row">
+            <span class="ea-t100-rk rk-s">#2</span>
+            <span class="ea-t100-n">nexusai<span class="tld">.com</span></span>
+            <div class="ea-t100-m"><span class="ea-t100-bid">$875</span><span class="ea-rtag rt-h">89</span></div>
+          </div>
+          <div class="ea-t100-row">
+            <span class="ea-t100-rk rk-b">#3</span>
+            <span class="ea-t100-n">tradeflow<span class="tld">.net</span></span>
+            <div class="ea-t100-m"><span class="ea-t100-bid">$340</span><span class="ea-rtag rt-h">85</span></div>
+          </div>
+          <div class="ea-t100-row">
+            <span class="ea-t100-rk">#4</span>
+            <span class="ea-t100-n">vaultpay<span class="tld">.com</span></span>
+            <div class="ea-t100-m"><span class="ea-t100-bid">$210</span><span class="ea-rtag rt-h">83</span></div>
+          </div>
+          <div class="ea-t100-row">
+            <span class="ea-t100-rk">#5</span>
+            <span class="ea-t100-n">swiftlend<span class="tld">.com</span></span>
+            <div class="ea-t100-m"><span class="ea-t100-bid">$185</span><span class="ea-rtag rt-m">78</span></div>
+          </div>
+          <div class="ea-t100-row">
+            <span class="ea-t100-rk">#6</span>
+            <span class="ea-t100-n">cryptovault<span class="tld">.io</span></span>
+            <div class="ea-t100-m"><span class="ea-t100-bid">$155</span><span class="ea-rtag rt-m">75</span></div>
+          </div>
+          <div class="ea-t100-row" style="justify-content:center;padding:1rem">
+            <a href="https://expiredauctions.com/top-100" style="font-size:.85rem;font-weight:700;color:var(--ea-gold-b);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem">
+              View all 100 domains <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOURCES ═══ -->
+<section class="ea-sec ea-sec-lt" aria-labelledby="sources-title">
+  <div class="container">
+    <div class="ea-sec-hdr">
+      <div class="ea-sec-ey"><i class="bi bi-broadcast-pin" aria-hidden="true"></i> Auction Platforms</div>
+      <h2 class="ea-sec-t" id="sources-title">Three Major Marketplaces, One Platform</h2>
+      <p class="ea-sec-s">We aggregate live auction data from the three biggest expired domain marketplaces. Browse each source directly or view all domains together.</p>
+    </div>
+    <div class="ea-src-grid">
+      <!-- GoDaddy -->
+      <a href="https://expiredauctions.com/godaddy" class="ea-src-card ea-src-gd-c" aria-label="Browse GoDaddy expired domain auctions on ExpiredAuctions.com">
+        <div class="ea-mono ea-mono-gd" aria-hidden="true">G</div>
+        <h3 class="ea-src-name">GoDaddy Auctions</h3>
+        <p class="ea-src-desc">The world's largest domain registrar runs one of the most active expired domain auction markets. Thousands of domains expire daily with competitive bidding.</p>
+        <span class="ea-src-link ea-src-link-gd">
+          Browse GoDaddy Domains <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </span>
+        <div class="ea-src-stats">
+          <div><span class="ea-src-stat-v">Largest</span><span class="ea-src-stat-l">Marketplace</span></div>
+          <div><span class="ea-src-stat-v">Daily</span><span class="ea-src-stat-l">Feed Updates</span></div>
+          <div><span class="ea-src-stat-v">Live</span><span class="ea-src-stat-l">Bid Tracking</span></div>
+        </div>
+      </a>
+      <!-- Dynadot -->
+      <a href="https://expiredauctions.com/dynadot" class="ea-src-card ea-src-dy-c" aria-label="Browse Dynadot expired domain auctions on ExpiredAuctions.com">
+        <div class="ea-mono ea-mono-dy" aria-hidden="true">D</div>
+        <h3 class="ea-src-name">Dynadot Auctions</h3>
+        <p class="ea-src-desc">Dynadot offers a clean, competitive auction platform with a strong selection of expiring domains across popular TLDs at often lower starting prices.</p>
+        <span class="ea-src-link ea-src-link-dy">
+          Browse Dynadot Domains <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </span>
+        <div class="ea-src-stats">
+          <div><span class="ea-src-stat-v">Competitive</span><span class="ea-src-stat-l">Pricing</span></div>
+          <div><span class="ea-src-stat-v">Daily</span><span class="ea-src-stat-l">Feed Updates</span></div>
+          <div><span class="ea-src-stat-v">Multi-TLD</span><span class="ea-src-stat-l">Selection</span></div>
+        </div>
+      </a>
+      <!-- Namecheap -->
+      <a href="https://expiredauctions.com/namecheap" class="ea-src-card ea-src-nc-c" aria-label="Browse Namecheap expired domain auctions on ExpiredAuctions.com">
+        <div class="ea-mono ea-mono-nc" aria-hidden="true">N</div>
+        <h3 class="ea-src-name">Namecheap Auctions</h3>
+        <p class="ea-src-desc">Namecheap's marketplace features a curated selection of expiring domains with transparent pricing and a trusted platform used by millions of domain owners.</p>
+        <span class="ea-src-link ea-src-link-nc">
+          Browse Namecheap Domains <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </span>
+        <div class="ea-src-stats">
+          <div><span class="ea-src-stat-v">Trusted</span><span class="ea-src-stat-l">Platform</span></div>
+          <div><span class="ea-src-stat-v">Daily</span><span class="ea-src-stat-l">Feed Updates</span></div>
+          <div><span class="ea-src-stat-v">Curated</span><span class="ea-src-stat-l">Selection</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GUIDE ═══ -->
+<section class="ea-sec ea-guide-sec" aria-labelledby="guide-title">
+  <div class="container">
+    <div class="ea-guide-card">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="ea-guide-ey"><i class="bi bi-book-fill" aria-hidden="true"></i> Free Resource</div>
+          <h2 class="ea-guide-h" id="guide-title">The Complete Domain Investor Guide</h2>
+          <p class="ea-guide-s">Whether you're just starting out or a seasoned investor, our free guide covers everything — from understanding domain lifecycles and valuation to advanced bidding strategies and portfolio management.</p>
+          <a href="https://expiredauctions.com/guide" class="ea-btn-purple">
+            <i class="bi bi-book-fill" aria-hidden="true"></i>
+            Read the Free Guide
+            <i class="bi bi-arrow-right arr" aria-hidden="true"></i>
+          </a>
+          <div class="ea-guide-topics" aria-label="Guide topics covered">
+            <span class="ea-guide-topic"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Domain Valuation</span>
+            <span class="ea-guide-topic"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Bidding Strategies</span>
+            <span class="ea-guide-topic"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> SEO Value</span>
+            <span class="ea-guide-topic"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Portfolio Management</span>
+            <span class="ea-guide-topic"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Domain Flipping</span>
+            <span class="ea-guide-topic"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Legal Considerations</span>
+            <span class="ea-guide-topic"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Auction Platforms</span>
+            <span class="ea-guide-topic"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Using Our Platform</span>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center align-items-center">
+          <div style="text-align:center">
+            <div style="font-size:5rem;line-height:1;margin-bottom:1rem" aria-hidden="true">📖</div>
+            <div style="font-size:2.5rem;font-weight:900;color:var(--ea-purple);letter-spacing:-.03em">30+</div>
+            <div style="font-size:.8rem;color:var(--ea-m);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem">In-Depth Chapters</div>
+            <div style="font-size:2.5rem;font-weight:900;color:var(--ea-cyan);letter-spacing:-.03em">100%</div>
+            <div style="font-size:.8rem;color:var(--ea-m);text-transform:uppercase;letter-spacing:.06em">Free Forever</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section class="ea-sec ea-nl-sec" aria-labelledby="newsletter-title">
+  <div class="container">
+    <div class="ea-nl-card">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="ea-nl-ey"><i class="bi bi-envelope-paper-fill" aria-hidden="true"></i> Free Daily Newsletter</div>
+          <h2 class="ea-nl-h" id="newsletter-title">Tomorrow's Top 10, to Your Inbox.</h2>
+          <p class="ea-nl-s">Join domain investors who get the best expiring domains delivered every morning. No spam, no upsells — just the domains worth your time, curated by our algorithm.</p>
+          <div class="ea-nl-perks" aria-label="Newsletter benefits">
+            <span class="ea-nl-perk"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Daily Top 10 picks</span>
+            <span class="ea-nl-perk"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Ratings included</span>
+            <span class="ea-nl-perk"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Direct auction links</span>
+            <span class="ea-nl-perk"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Unsubscribe anytime</span>
+          </div>
+          <a href="https://expiredauctions.com/subscribe" class="ea-btn-p" style="display:inline-flex">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            Subscribe Free — No Spam
+            <i class="bi bi-arrow-right arr" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-lg-5">
+          <div class="ea-nl-proof" aria-label="Newsletter social proof statistics">
+            <div class="ea-nl-proof-item">
+              <span class="ea-nl-proof-v">Daily</span>
+              <span class="ea-nl-proof-l">Delivery</span>
+            </div>
+            <div class="ea-nl-proof-item">
+              <span class="ea-nl-proof-v">Top 10</span>
+              <span class="ea-nl-proof-l">Curated Picks</span>
+            </div>
+            <div class="ea-nl-proof-item">
+              <span class="ea-nl-proof-v">100%</span>
+              <span class="ea-nl-proof-l">Free Forever</span>
+            </div>
+            <div class="ea-nl-proof-item">
+              <span class="ea-nl-proof-v">0</span>
+              <span class="ea-nl-proof-l">Spam Emails</span>
+            </div>
+          </div>
+          <div style="margin-top:2rem;padding:1.25rem;background:rgba(79,172,254,.06);border:1px solid rgba(79,172,254,.15);border-radius:.85rem">
+            <div style="font-size:.75rem;font-weight:700;color:var(--ea-cyan);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.6rem">
+              <i class="bi bi-envelope-open-fill me-1" aria-hidden="true"></i> Sample Newsletter Preview
+            </div>
+            <div style="font-size:.8rem;color:var(--ea-m);line-height:1.7">
+              <strong style="color:var(--ea-t)">Today's Top Pick:</strong> venture.com — Rating 87/100<br>
+              Current bid: $412 · 8 bids · Ends in 4h<br>
+              <span style="color:var(--ea-cyan)">+ 9 more hand-picked domains...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="ea-footer" aria-label="Site footer">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Brand -->
+      <div class="col-lg-4 col-md-6">
+        <a href="https://expiredauctions.com/" class="ea-footer-brand">
+          <div class="ea-logo" aria-hidden="true">E</div>
+          ExpiredAuctions<span style="color:var(--ea-cyan)">.com</span>
+        </a>
+        <p class="ea-footer-desc">The smart way to find expired domain auctions. We aggregate, rate, and curate the best opportunities from GoDaddy, Dynadot, and Namecheap — updated daily.</p>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="https://expiredauctions.com/" class="ea-nav-cta" style="font-size:.8rem;padding:.4rem .9rem">
+            <i class="bi bi-house-fill" aria-hidden="true"></i> Homepage
+          </a>
+          <a href="https://expiredauctions.com/subscribe" style="display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .9rem;border-radius:50rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:var(--ea-t);font-size:.8rem;font-weight:600;text-decoration:none">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i> Newsletter
+          </a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="ea-footer-h6" style="font-size:.8rem;font-weight:700;color:var(--ea-t);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem">Quick Links</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="https://expiredauctions.com/" class="ea-footer-link"><i class="bi bi-house-door" aria-hidden="true"></i> Homepage</a></li>
+          <li class="mb-2"><a href="https://expiredauctions.com/top-100" class="ea-footer-link"><i class="bi bi-trophy" aria-hidden="true"></i> Top 100 Domains</a></li>
+          <li class="mb-2"><a href="https://expiredauctions.com/guide" class="ea-footer-link"><i class="bi bi-book" aria-hidden="true"></i> Investor Guide</a></li>
+          <li class="mb-2"><a href="https://expiredauctions.com/subscribe" class="ea-footer-link"><i class="bi bi-envelope" aria-hidden="true"></i> Newsletter</a></li>
+          <li class="mb-2"><a href="https://expiredauctions.com/archive" class="ea-footer-link"><i class="bi bi-calendar3" aria-hidden="true"></i> Archive</a></li>
+        </ul>
+      </div>
+      <!-- Sources -->
+      <div class="col-lg-2 col-md-6">
+        <h6 style="font-size:.8rem;font-weight:700;color:var(--ea-t);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem">Auction Sources</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="https://expiredauctions.com/godaddy" class="ea-footer-link"><i class="bi bi-globe" aria-hidden="true"></i> GoDaddy</a></li>
+          <li class="mb-2"><a href="https://expiredauctions.com/dynadot" class="ea-footer-link"><i class="bi bi-globe" aria-hidden="true"></i> Dynadot</a></li>
+          <li class="mb-2"><a href="https://expiredauctions.com/namecheap" class="ea-footer-link"><i class="bi bi-globe" aria-hidden="true"></i> Namecheap</a></li>
+        </ul>
+      </div>
+      <!-- Legal -->
+      <div class="col-lg-4 col-md-6">
+        <h6 style="font-size:.8rem;font-weight:700;color:var(--ea-t);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem">About</h6>
+        <p style="font-size:.875rem;color:var(--ea-m);line-height:1.65;margin-bottom:1rem">ExpiredAuctions.com is an independent domain auction aggregator. We are not affiliated with GoDaddy, Dynadot, or Namecheap. Domain data is sourced from their public auction feeds.</p>
+        <ul class="list-unstyled mb-0 d-flex flex-wrap gap-3">
+          <li><a href="https://expiredauctions.com/about" class="ea-footer-link" style="font-size:.8rem"><i class="bi bi-info-circle" aria-hidden="true"></i> About</a></li>
+          <li><a href="https://expiredauctions.com/privacy" class="ea-footer-link" style="font-size:.8rem"><i class="bi bi-shield-check" aria-hidden="true"></i> Privacy</a></li>
+          <li><a href="https://expiredauctions.com/terms" class="ea-footer-link" style="font-size:.8rem"><i class="bi bi-file-text" aria-hidden="true"></i> Terms</a></li>
+          <li><a href="https://expiredauctions.com/contact" class="ea-footer-link" style="font-size:.8rem"><i class="bi bi-envelope" aria-hidden="true"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.1);margin:2rem 0 1.5rem">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <p class="ea-footer-copy mb-0" style="font-size:.8rem;color:rgba(242,245,255,.4)">
+        &copy; 2025 <a href="https://expiredauctions.com/" style="color:rgba(242,245,255,.55);text-decoration:none">ExpiredAuctions.com</a>. All rights reserved.
+        Domain auction data sourced from public feeds. Not financial advice.
+      </p>
+      <div class="d-flex align-items-center gap-2">
+        <span style="font-size:.75rem;color:rgba(242,245,255,.35)">Powered by</span>
+        <span style="font-size:.75rem;font-weight:700;color:rgba(242,245,255,.5)">ExpiredAuctions.com</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap 5.3 JS Bundle (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmFXFpFDkego/ALe0Oa8LLBmMBz" crossorigin="anonymous"></script>
+<script>
+
+// Reason: Smooth scroll offset for sticky navbar
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      var offset = 72;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  });
+});
+
+// Reason: Intersection Observer for fade-in-up animation on scroll
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('ea-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.ea-feat, .ea-src-card, .ea-t100-row, .ea-chip').forEach(function(el) {
+  el.classList.add('ea-animate');
+  observer.observe(el);
+});
+
+</script>
+</body>
+</html>
