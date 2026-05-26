@@ -82,16 +82,6 @@ This rating helps investors quickly prioritize names that may deserve closer rev
 
 ---
 
-## Daily Top 100 List
-
-The **Top 100 Domains** list highlights the highest-rated expiring domain opportunities available each day.
-
-This is useful for investors who want a fast daily shortlist instead of sorting through thousands of auctions manually.
-
-[View Today’s Top 100](https://expiredauctions.com/top-100)
-
----
-
 ## Powerful Filtering Tools
 
 ExpiredAuctions.com includes filtering tools that allow investors to narrow results by:
@@ -206,42 +196,12 @@ Namecheap’s marketplace includes expiring domain auctions from a trusted regis
 
 ---
 
-# Domain Investor Guide
+## Expired Auctions Summary
 
-ExpiredAuctions.com includes a free educational guide for domain investors.
+ExpiredAuctions.com is built to make expired domain auction research faster, easier, and more useful for domain investors, builders, marketers, and entrepreneurs. Instead of jumping between multiple auction platforms, users can browse aggregated expired domain opportunities in one simple, searchable place.
 
-The guide is useful for beginners as well as experienced investors who want to improve their research, bidding, and portfolio strategy.
+The platform highlights key auction details, useful domain metrics, filtering tools, curated picks, and a daily newsletter featuring standout expired domain auctions. Whether someone is hunting for brandable names, SEO assets, investment opportunities, or domains for future projects, ExpiredAuctions.com helps surface better options with less manual research.
 
-## Topics Covered
+The goal is simple: save time, uncover hidden domain opportunities, and give users a cleaner way to track expired auction inventory across the web.
 
-- Domain valuation
-- Bidding strategies
-- SEO value
-- Portfolio management
-- Domain flipping
-- Legal considerations
-- Auction platforms
-- Using ExpiredAuctions.com
-
-[Read the Complete Domain Investor Guide](https://expiredauctions.com/guide)
-
----
-
-# Newsletter
-
-## Tomorrow’s Top 10, Delivered to Your Inbox
-
-The ExpiredAuctions.com newsletter sends selected expired domain opportunities directly to subscribers.
-
-It is designed for domain investors who want a quick daily list of domains worth reviewing.
-
-## Newsletter Includes
-
-- Daily Top 10 expired domain picks
-- Ratings for each selected domain
-- Direct auction links
-- Simple, useful domain opportunities
-- No spam
-- Free forever
-
-[Subscribe to the Free Newsletter](https://expiredauctions.com/subscribe)
+Visit: [ExpiredAuctions.com](https://www.expiredauctions.com)
