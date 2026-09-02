@@ -6,8 +6,8 @@ ExpiredAuctions.com aggregates, rates, and curates the top expired domain auctio
 
 [Visit ExpiredAuctions.com](https://expiredauctions.com/)  
 [View Top 100 Domains](https://expiredauctions.com/top-100)  
-[Read the Investor Guide](https://expiredauctions.com/guide)  
-[Subscribe to the Free Newsletter](https://expiredauctions.com/subscribe)
+[Read the Investor Guide](https://expiredauctions.com/domain-investor-guide)  
+[Subscribe to the Free Newsletter](https://expiredauctions.com/newsletter)
 
 ---
 
@@ -113,7 +113,7 @@ Topics include:
 - Auction platforms
 - How to use ExpiredAuctions.com effectively
 
-[Read the Free Guide](https://expiredauctions.com/guide)
+[Read the Free Guide](https://expiredauctions.com/domain-investor-guide)
 
 ---
 
@@ -130,7 +130,7 @@ Newsletter benefits include:
 - Free subscription
 - Easy unsubscribe
 
-[Subscribe Free](https://expiredauctions.com/subscribe)
+[Subscribe Free](https://expiredauctions.com/newsletter)
 
 ---
 
@@ -204,4 +204,4 @@ The platform highlights key auction details, useful domain metrics, filtering to
 
 The goal is simple: save time, uncover hidden domain opportunities, and give users a cleaner way to track expired auction inventory across the web.
 
-Visit: [ExpiredAuctions.com](https://www.expiredauctions.com)
+Visit: [ExpiredAuctions.com](https://expiredauctions.com)
